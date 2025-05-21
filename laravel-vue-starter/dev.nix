@@ -32,9 +32,13 @@
       # Runs when a workspace is first created with this `dev.nix` file
       onCreate = {
         composer-install = "composer install";
+        generate-app-key = "php artisan key:generate --ansi";
+        touch-sqlite = "[ ! -f database/database.sqlite ] && touch database/database.sqlite";
+        create-db = "mariadb -u root -e \"create database laravel;\"";
+        migrate = "php artisan migrate --graceful --ansi";
         yarn-install = "yarn install";
         # Open editors for the following files by default, if they exist:
-        default.openFiles = [ "README.md" "resources/views/app.blade.php" ];
+        default.openFiles = [ "README.md" "resources/views/app.blade.php" ".env" ];
       };
       onStart = {
         composer-install = "composer install";
@@ -47,10 +51,6 @@
       previews = {
         web = {
           command = ["php" "artisan" "serve" "--port" "$PORT" "--host" "0.0.0.0"];
-          manager = "web";
-        };
-        dev = {
-          command = ["yarn" "run" "dev" "--host" "0.0.0.0" "--port" "$PORT"];
           manager = "web";
         };
       };
