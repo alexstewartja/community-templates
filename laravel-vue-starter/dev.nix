@@ -5,9 +5,9 @@
   channel = "stable-24.11"; # or "unstable"
   # Use https://search.nixos.org/packages to find packages
   packages = [
-    pkgs.php84
-    pkgs.php84Packages.composer
-    pkgs.php84Extensions.redis
+    pkgs.php83
+    pkgs.php83Packages.composer
+    pkgs.php83Extensions.redis
     pkgs.nodejs_20
     pkgs.yarn
   ];
