@@ -32,8 +32,7 @@
       # Runs when a workspace is first created with this `dev.nix` file
       onCreate = {
         laravel-install = "composer global require laravel/installer";
-        composer-export-bin = "export PATH=$PATH:$HOME/.config/composer/vendor/bin";
-        laravel-new = "[ ! -f artisan ] && (laravel new project_files --git --vue --pest --silent --force && mv -f project_files/* . && rm -rf project_files)";
+        laravel-new = "export PATH=$PATH:$HOME/.config/composer/vendor/bin && [ ! -f artisan ] && (laravel new project_files --git --vue --pest --silent --force && mv -f project_files/* . && rm -rf project_files)";
         yarn-install = "yarn install";
         # Open editors for the following files by default, if they exist:
         default.openFiles = [ "README.md" "resources/views/app.blade.php" ];
