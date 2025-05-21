@@ -50,7 +50,7 @@
           manager = "web";
         };
         dev = {
-          command = ["yarn" "run" "dev"];
+          command = ["yarn" "run" "dev" "--host" "0.0.0.0" "--port" "$PORT"];
           manager = "web";
         };
       };
