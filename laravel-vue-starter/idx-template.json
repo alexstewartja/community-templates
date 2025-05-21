@@ -1,6 +1,6 @@
 {
-  "name": "Laravel Vue Starter",
-  "description": "Laravel + Vue template",
+  "name": "Laravel Vue Starter Kit",
+  "description": "This Vue starter kit utilizes Vue 3 and the Composition API, TypeScript, Tailwind, and the shadcn-vue component library",
   "categories": [
     "Backend"
   ],
