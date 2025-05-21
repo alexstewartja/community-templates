@@ -43,6 +43,7 @@
       onStart = {
         composer-install = "composer install";
         yarn-install = "yarn install";
+        yarn-build-watch = "yarn run build --watch";
       };
     };
     # Enable previews and customize configuration
