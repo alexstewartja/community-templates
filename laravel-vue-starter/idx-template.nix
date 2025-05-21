@@ -12,7 +12,6 @@
       mkdir composer-home
       export COMPOSER_HOME=./composer-home
 			mkdir "$out"
-      composer self-update
       composer global require laravel/installer
       laravel new "$out" --vue --pest
 			mkdir -p "$out"/.idx
