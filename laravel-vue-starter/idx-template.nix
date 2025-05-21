@@ -4,6 +4,9 @@
       pkgs.gnused
       pkgs.unzip
       pkgs.wget
+      pkgs.php83
+      pkgs.php83Packages.composer
+      pkgs.yarn
     ];
 
     bootstrap = ''
@@ -18,5 +21,7 @@
       cd "$out"/
       [ ! -f ".env" ] && cp .env.example .env
       [ -f "package-lock.json" ] && rm package-lock.json
+      composer install
+      yarn install
     '';
 }
