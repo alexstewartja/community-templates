@@ -9,10 +9,7 @@
     ];
 
     bootstrap = ''
-      composer global require laravel/installer
-      export PATH="$PATH:$HOME/.config/composer/vendor/bin"
 			mkdir "$out"
-      laravel new "$out" --vue --pest
 			mkdir -p "$out"/.idx
   		cp ${./dev.nix} "$out"/.idx/dev.nix
     '';
