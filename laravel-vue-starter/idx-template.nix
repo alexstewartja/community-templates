@@ -4,7 +4,6 @@
       pkgs.gnused
       pkgs.unzip
       pkgs.wget
-      pkgs.nixos-firewall-tool
     ];
 
     bootstrap = ''
@@ -19,6 +18,5 @@
       cd "$out"/
       [ ! -f ".env" ] && cp .env.example .env
       [ -f "package-lock.json" ] && rm package-lock.json
-      nixos-firewall-tool open tcp 5173
     '';
 }
