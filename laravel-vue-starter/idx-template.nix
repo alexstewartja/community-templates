@@ -12,7 +12,8 @@
       mkdir composer-home
       export COMPOSER_HOME=./composer-home
 			mkdir "$out"
-      composer require laravel/installer
+      composer global require laravel/installer
+      export PATH="$PATH:./composer-home/vendor/bin"
       laravel new "$out" --vue --pest
 			mkdir -p "$out"/.idx
   		cp ${./dev.nix} "$out"/.idx/dev.nix
