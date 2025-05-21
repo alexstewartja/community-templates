@@ -50,8 +50,9 @@
           manager = "web";
         };
         dev = {
-          command = ["yarn" "run" "dev"]
-        }
+          command = ["yarn" "run" "dev"];
+          manager = "web";
+        };
       };
     };
   };
