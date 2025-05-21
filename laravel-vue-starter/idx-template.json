@@ -1,0 +1,8 @@
+{
+  "name": "Laravel Vue Starter",
+  "description": "Laravel + Vue template",
+  "categories": [
+    "Backend"
+  ],
+  "icon": "https://www.gstatic.com/monospace/240118/logo_laravel.svg"
+}
