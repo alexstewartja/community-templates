@@ -7,8 +7,8 @@
 
     bootstrap = ''
 			mkdir "$out"
-      wget https://github.com/laravel/vue-starter-kit/archive/refs/heads/main.zip
-      unzip vue-starter-kit.zip
+      wget2 https://github.com/laravel/vue-starter-kit/archive/refs/heads/main.zip
+      unzip main.zip
       mv vue-starter-kit/* "$out"/
       rm -rf vue-starter-kit
 			mkdir -p "$out"/.idx
